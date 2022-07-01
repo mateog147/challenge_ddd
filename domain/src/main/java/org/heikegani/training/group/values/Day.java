@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Day implements ValueObject<String> {
     private enum Days{LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO};
+
     private Days day;
 
     public Day(String day) {

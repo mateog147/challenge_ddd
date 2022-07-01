@@ -23,8 +23,6 @@ o
 ?domain/src/main/java/org/heikegani/training/group/Location.java,e\e\ee11fe7a684571d32e61c8a9b5c87c06ab72a527
 
 Odomain/src/main/java/org/heikegani/training/group/events/BeltPromotionDone.java,1\a\1a6ae81723c0fbca3e72a6d1f9808275e689403c
-q
-Adomain/src/main/java/org/heikegani/training/group/values/Day.java,1\8\18579fef70d955896c28de3a64cb33937e05bd0b
 r
 Bdomain/src/main/java/org/heikegani/training/group/values/City.java,b\3\b39f009a0f12af231f133a0c1917a9fb96a12933
 v
