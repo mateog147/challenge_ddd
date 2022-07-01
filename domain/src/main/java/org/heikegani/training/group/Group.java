@@ -1,9 +1,11 @@
 package org.heikegani.training.group;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import org.heikegani.training.group.events.*;
 import org.heikegani.training.group.values.*;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -18,6 +20,17 @@ public class Group extends AggregateEvent<GroupId> {
         appendChange(new GroupCreated(location)).apply();
     }
 
+    private Group(GroupId entityId){
+        super(entityId);
+        subscribe(new GroupChange(this));
+    }
+
+    public static Group from(GroupId groupId, List<DomainEvent> events){
+        var group = new Group(groupId);
+        events.forEach(group::applyEvent);
+        return group;
+    }
+
     public void addJudoka(JudokaId judokaId, Name name){
         Objects.requireNonNull(judokaId);
         Objects.requireNonNull(name);
@@ -29,8 +42,8 @@ public class Group extends AggregateEvent<GroupId> {
         appendChange(new LocationUpdated(entityId,city, place)).apply();
     }
 
-    public void assignStartHour(StartHour newStartHour){
-        appendChange(new StartHourAssigned(newStartHour)).apply();
+    public void assignStartHour(int hour, int minutes){
+        appendChange(new StartHourAssigned(hour,minutes)).apply();
     }
 
     public void addTrainingDay(Day newDay){
@@ -53,7 +66,7 @@ public class Group extends AggregateEvent<GroupId> {
         return schedule;
     }
 
-    public Optional<Judoka> getJudokaById(JudokaId id){
+   protected Optional<Judoka> getJudokaById(JudokaId id){
         return judokas.stream().filter(judoka -> judoka.identity().equals(id)).findFirst();
     }
 }

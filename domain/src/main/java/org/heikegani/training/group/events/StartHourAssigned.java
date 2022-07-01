@@ -4,14 +4,20 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.heikegani.training.group.values.StartHour;
 
 public class StartHourAssigned extends DomainEvent {
-    private final StartHour startHour;
+    private final int hour;
+    private final int minutes;
 
-    public StartHourAssigned(StartHour newStartHour) {
+    public StartHourAssigned(int hour, int minutes) {
         super("heikegani.group.starthourassigned");
-        this.startHour = newStartHour;
+        this.hour = hour;
+        this.minutes = minutes;
     }
 
-    public StartHour getStartHour() {
-        return startHour;
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinutes() {
+        return minutes;
     }
 }

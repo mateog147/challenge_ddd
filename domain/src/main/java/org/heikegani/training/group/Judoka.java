@@ -24,6 +24,14 @@ public class Judoka extends Entity<JudokaId> {
         this.birthDay = Objects.requireNonNull(birthDay);
     }
 
+    public void changeRank(){
+        if(this.rank == null){
+            this.rank = new Rank("BLANCO");
+        }else{
+            this.rank = this.rank.nextRank();
+        }
+    }
+
     public void changeRank(Rank newRank){
         this.rank = Objects.requireNonNull(newRank);
     }

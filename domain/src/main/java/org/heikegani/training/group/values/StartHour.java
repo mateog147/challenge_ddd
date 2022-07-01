@@ -2,6 +2,8 @@ package org.heikegani.training.group.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
+import java.util.Objects;
+
 public class StartHour implements ValueObject<String> {
     private final String starHour;
 
@@ -24,5 +26,18 @@ public class StartHour implements ValueObject<String> {
     @Override
     public String value() {
         return this.starHour;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StartHour startHour = (StartHour) o;
+        return Objects.equals(starHour, startHour.starHour);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(starHour);
     }
 }

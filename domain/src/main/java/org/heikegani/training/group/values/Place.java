@@ -17,4 +17,17 @@ public class Place implements ValueObject<String> {
 
         return this.placeName;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Place place = (Place) o;
+        return Objects.equals(placeName, place.placeName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(placeName);
+    }
 }
