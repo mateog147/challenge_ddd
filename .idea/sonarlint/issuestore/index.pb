@@ -17,16 +17,12 @@ x
 Hdomain/src/main/java/org/heikegani/training/group/values/LocationId.java,5\e\5e1c3c358350be16eaa5f2fa68a3c974626687bf
 o
 ?domain/src/main/java/org/heikegani/training/group/Schedule.java,2\b\2bb747a867149dbb6f8ee6bfa306e15aa8a5dc9c
-z
-Jdomain/src/main/java/org/heikegani/training/group/events/GroupCreated.java,6\7\67a5a09d9a251cf584e05cfe463222c0440dd0b8
 }
 Mdomain/src/main/java/org/heikegani/training/group/events/LocationUpdated.java,5\d\5d470b3d5f8d3712f11b61ee835b7d76e842cb0e
 y
 Idomain/src/main/java/org/heikegani/training/group/events/JudokaAdded.java,9\e\9e6cedbf29fe98cc6273a5fa1906023560d3b519
 o
 ?domain/src/main/java/org/heikegani/training/group/Location.java,e\e\ee11fe7a684571d32e61c8a9b5c87c06ab72a527
-~
-Ndomain/src/main/java/org/heikegani/training/group/events/TrainingDayAdded.java,b\2\b2cd5157b33663b5e3a3fc1966f77f8ecb9cd032
 
 Odomain/src/main/java/org/heikegani/training/group/events/BeltPromotionDone.java,1\a\1a6ae81723c0fbca3e72a6d1f9808275e689403c
 q
@@ -49,8 +45,6 @@ r
 Bdomain/src/main/java/org/heikegani/training/group/values/Rank.java,e\0\e0d8a84c7d3097e8ee870f53b7068fb82a6b44a2
 r
 Bdomain/src/main/java/org/heikegani/training/group/GroupChange.java,5\0\50ea63d152f315e075d2f3bc9599fdcf0ccd2084
-m
-=domain/src/main/java/org/heikegani/training/group/Judoka.java,8\2\82fd00977e8e6beef4ee44835779965e44912f94
 
 Odomain/src/main/java/org/heikegani/training/group/events/StartHourAssigned.java,9\f\9f75adb3bb275d24f4bf1302721d40bbf98b7e04
 }
