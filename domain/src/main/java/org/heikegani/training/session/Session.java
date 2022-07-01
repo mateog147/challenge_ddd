@@ -22,7 +22,7 @@ public class Session extends AggregateEvent<SessionId> {
         super(entityId);
     }
 
-    public void newAttendee(Attendee newAttendee){
+    public void addNewAttendee(Attendee newAttendee){
         appendChange(new AttendeeAdded(newAttendee)).apply();
     }
 
