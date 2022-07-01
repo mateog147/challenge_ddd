@@ -52,4 +52,5 @@ public class Sensei extends AggregateEvent<SenseiId> {
         appendChange(new CourseAdded(newCourse)).apply();
     }
 
+
 }
