@@ -17,7 +17,7 @@ public class Equipment extends Entity<EquipmentId> {
         this.tools = new HashSet<>();
     }
 
-    public void addCourse(Tool newTool){
+    public void addTool(Tool newTool){
         this.tools.add(Objects.requireNonNull(newTool));
     }
 

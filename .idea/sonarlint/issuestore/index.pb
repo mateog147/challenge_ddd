@@ -5,8 +5,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 h
 8domain/src/test/java/org/heikegani/training/AppTest.java,f\3\f3b8a98269cfd5a71f95af0488309b196de7aea2
-p
-@domain/src/main/java/org/heikegani/training/session/Session.java,a\0\a09f5023445533c34c32ff87747a3f33d8b8df8b
 >
 domain/pom.xml,8\b\8b11330a6810846535e4b5ba2024ccfcee112862
 ^
@@ -43,8 +41,6 @@ s
 Cdomain/src/main/java/org/heikegani/training/group/values/Place.java,1\8\18d09089b95483353ab67c1d71bdf7d6a991d38c
 r
 Bdomain/src/main/java/org/heikegani/training/group/values/Rank.java,e\0\e0d8a84c7d3097e8ee870f53b7068fb82a6b44a2
-r
-Bdomain/src/main/java/org/heikegani/training/group/GroupChange.java,5\0\50ea63d152f315e075d2f3bc9599fdcf0ccd2084
 
 Odomain/src/main/java/org/heikegani/training/group/events/StartHourAssigned.java,9\f\9f75adb3bb275d24f4bf1302721d40bbf98b7e04
 }
@@ -57,5 +53,3 @@ Odomain/src/main/java/org/heikegani/training/group/commands/AssignStartHour.java
 Ndomain/src/main/java/org/heikegani/training/group/commands/UpdateLocation.java,a\e\ae6d4792b1ecc82dda3d708da451c1b4b44ec31b
 y
 Idomain/src/main/java/org/heikegani/training/group/commands/AddJudoka.java,a\8\a8fd7594696b3132b7a667ea8c81861609a11290
-{
-Kdomain/src/main/java/org/heikegani/training/group/commands/CreateGroup.java,5\6\562eae5628a93bfc833b90c690d42238b23ad8ea
