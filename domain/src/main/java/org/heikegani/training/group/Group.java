@@ -15,9 +15,9 @@ public class Group extends AggregateEvent<GroupId> {
     protected Location location;
     protected Schedule schedule;
 
-    public Group(GroupId entityId, Location location) {
+    public Group(GroupId entityId, Location location, ScheduleId scheduleId) {
         super(entityId);
-        appendChange(new GroupCreated(location)).apply();
+        appendChange(new GroupCreated(location, scheduleId)).apply();
     }
 
     private Group(GroupId entityId){
@@ -42,8 +42,8 @@ public class Group extends AggregateEvent<GroupId> {
         appendChange(new LocationUpdated(entityId,city, place)).apply();
     }
 
-    public void assignStartHour(int hour, int minutes){
-        appendChange(new StartHourAssigned(hour,minutes)).apply();
+    public void assignStartHour(StartHour newStartHour){
+        appendChange(new StartHourAssigned(newStartHour)).apply();
     }
 
     public void addTrainingDay(Day newDay){

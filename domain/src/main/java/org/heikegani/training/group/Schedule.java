@@ -18,9 +18,9 @@ public class Schedule extends Entity<ScheduleId> {
         this.days = new HashSet<>();
     }
 
-    public void changeStartHour(int hour, int minute){
+    public void changeStartHour(StartHour startHour){
 
-        this.startHour = new StartHour(Objects.requireNonNull(hour), Objects.requireNonNull(minute));
+        this.startHour = Objects.requireNonNull(startHour);
     }
 
     public void addDay(Day newDay){

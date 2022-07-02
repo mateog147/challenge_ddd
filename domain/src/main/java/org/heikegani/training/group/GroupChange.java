@@ -11,6 +11,7 @@ public class GroupChange extends EventChange {
         apply((GroupCreated event) ->{
             group.location = event.getLocation();
             group.judokas = new HashSet<>();
+            group.schedule = new Schedule(event.getScheduleId());
         });
 
         apply((JudokaAdded event)->{
@@ -23,7 +24,7 @@ public class GroupChange extends EventChange {
         });
 
         apply((StartHourAssigned event) ->{
-            group.schedule.changeStartHour(event.getHour(), event.getMinutes());
+            group.schedule.changeStartHour(event.getStartHour());
         });
 
         apply((TrainingDayAdded event) -> {

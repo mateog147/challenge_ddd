@@ -1,22 +1,24 @@
 package org.heikegani.training.group.commands;
 
 import co.com.sofka.domain.generic.Command;
+import org.heikegani.training.group.values.GroupId;
+import org.heikegani.training.group.values.StartHour;
 
 public class AssignStartHour extends Command {
 
-    private final int hour;
-    private final int minutes;
+    private final GroupId groupId;
+    private final StartHour startHour;
 
-    public AssignStartHour(int hour, int minutes) {
-        this.hour = hour;
-        this.minutes = minutes;
+    public AssignStartHour(GroupId groupId, StartHour startHour) {
+        this.groupId = groupId;
+        this.startHour = startHour;
     }
 
-    public int getHour() {
-        return hour;
+    public StartHour getStartHour() {
+        return startHour;
     }
 
-    public int getMinutes() {
-        return minutes;
+    public GroupId getGroupId() {
+        return groupId;
     }
 }
