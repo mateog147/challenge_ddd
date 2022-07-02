@@ -9,10 +9,6 @@ h
 .business/src/main/java/org/heikegani/Main.java,1\3\133d8b0d5ead6b6dd9e3d261d84fe3610a589644
 x
 Hdomain/src/main/java/org/heikegani/training/group/values/LocationId.java,5\e\5e1c3c358350be16eaa5f2fa68a3c974626687bf
-}
-Mdomain/src/main/java/org/heikegani/training/group/events/LocationUpdated.java,5\d\5d470b3d5f8d3712f11b61ee835b7d76e842cb0e
-y
-Idomain/src/main/java/org/heikegani/training/group/events/JudokaAdded.java,9\e\9e6cedbf29fe98cc6273a5fa1906023560d3b519
 
 Odomain/src/main/java/org/heikegani/training/group/events/BeltPromotionDone.java,1\a\1a6ae81723c0fbca3e72a6d1f9808275e689403c
 v
@@ -23,7 +19,3 @@ x
 Hdomain/src/main/java/org/heikegani/training/group/values/ScheduleId.java,a\8\a8d925980a2cec73012711d7ed81bb99b49dd74d
 r
 Bdomain/src/main/java/org/heikegani/training/group/values/Rank.java,e\0\e0d8a84c7d3097e8ee870f53b7068fb82a6b44a2
-}
-Mdomain/src/main/java/org/heikegani/training/group/commands/BeltPromotion.java,2\6\26dee653541b58696acdf6d19b4bdb31a75b73b5
-~
-Ndomain/src/main/java/org/heikegani/training/group/commands/UpdateLocation.java,a\e\ae6d4792b1ecc82dda3d708da451c1b4b44ec31b

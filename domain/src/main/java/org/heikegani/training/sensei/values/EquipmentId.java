@@ -10,7 +10,7 @@ public class EquipmentId extends Identity {
     public EquipmentId() {
     }
 
-    public EquipmentId of(String id){
+    public static EquipmentId of(String id){
         return new EquipmentId(id);
     }
 }

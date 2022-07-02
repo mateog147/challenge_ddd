@@ -7,6 +7,9 @@ public class SenseiChange extends EventChange {
     public SenseiChange(Sensei sensei) {
         apply((SenseiCreated event)->{
             sensei.name = event.getName();
+            sensei.senpai = null;
+            sensei.profile = new Profile(event.getProfileId());
+            sensei.equipment = new Equipment(event.getEquipmentId());
         });
         
         apply((RankChanged event)->{

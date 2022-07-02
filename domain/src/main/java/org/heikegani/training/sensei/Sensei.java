@@ -5,9 +5,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.heikegani.training.group.values.Name;
 import org.heikegani.training.group.values.Rank;
 import org.heikegani.training.sensei.events.*;
-import org.heikegani.training.sensei.values.Course;
-import org.heikegani.training.sensei.values.SenseiId;
-import org.heikegani.training.sensei.values.Tool;
+import org.heikegani.training.sensei.values.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -19,10 +17,10 @@ public class Sensei extends AggregateEvent<SenseiId> {
     protected Profile profile;
     protected Equipment equipment;
 
-    public Sensei(SenseiId entityId, Name name) {
+    public Sensei(SenseiId entityId, Name name,  ProfileId profileId, EquipmentId equipmentId) {
         super(entityId);
         Objects.requireNonNull(name);
-        appendChange(new SenseiCreated(name)).apply();
+        appendChange(new SenseiCreated(name,  profileId, equipmentId)).apply();
     }
 
     private Sensei(SenseiId entityId){

@@ -1,7 +1,10 @@
 package org.heikegani.training.session;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import org.heikegani.training.group.values.GroupId;
+import org.heikegani.training.sensei.Sensei;
+import org.heikegani.training.sensei.SenseiChange;
 import org.heikegani.training.sensei.values.SenseiId;
 import org.heikegani.training.session.events.*;
 import org.heikegani.training.session.values.*;
@@ -13,14 +16,24 @@ public class Session extends AggregateEvent<SessionId> {
     protected Feedback feedback;
     protected  Schema schema;
 
-    public Session(SessionId entityId,GroupId groupId) {
+    public Session(SessionId entityId,GroupId groupId, SchemaId schemaId, Intensity intensity, ListId listId ) {
         super(entityId);
-        appendChange(new SessionCreated(groupId)).apply();
+        appendChange(new SessionCreated(groupId, schemaId, intensity, listId)).apply();
     }
 
     private Session(SessionId entityId) {
+
         super(entityId);
+        subscribe(new SessionChange(this));
+
     }
+
+    public static Session from(SessionId senseiId, java.util.List<DomainEvent> events){
+        var session = new Session(senseiId);
+        events.forEach(session::applyEvent);
+        return session;
+    }
+
 
     public void addNewAttendee(Attendee newAttendee){
         appendChange(new AttendeeAdded(newAttendee)).apply();
